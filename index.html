@@ -21,6 +21,34 @@
         font-size: 24px !important;
       }
     </style>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 746018291 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-746018291"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-746018291');
+</script>
+
+<!-- Event snippet for Подписка conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-746018291/KjhHCJPpnrADEPOr3eMC',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+  
   </head>
   <body class="pt-5">
     <div class="container">
@@ -36,10 +64,10 @@
 
       <ul>
         <li>
-          <a href="https://dolphin.ru.com" target="_blank">dolphin.ru.com</a>
+          <a onclick="gtag_report_conversion(); return true;" href="https://dolphin.ru.com" target="_blank">dolphin.ru.com</a>
         </li>
         <li>
-          <a href="https://anty.dolphin.ru.com" target="_blank"
+          <a onclick="gtag_report_conversion(); return true;" href="https://anty.dolphin.ru.com" target="_blank"
             >anty.dolphin.ru.com</a
           >
         </li>
